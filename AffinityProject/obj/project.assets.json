@@ -12115,11 +12115,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\botha\\source\\repos\\AffinityProject\\AffinityProject\\AffinityProject.csproj",
+      "projectUniqueName": "C:\\Users\\botha\\source\\repos\\AffinityProject\\Affinity\\AffinityProject\\AffinityProject.csproj",
       "projectName": "AffinityProject",
-      "projectPath": "C:\\Users\\botha\\source\\repos\\AffinityProject\\AffinityProject\\AffinityProject.csproj",
+      "projectPath": "C:\\Users\\botha\\source\\repos\\AffinityProject\\Affinity\\AffinityProject\\AffinityProject.csproj",
       "packagesPath": "C:\\Users\\botha\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\botha\\source\\repos\\AffinityProject\\AffinityProject\\obj\\",
+      "outputPath": "C:\\Users\\botha\\source\\repos\\AffinityProject\\Affinity\\AffinityProject\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\botha\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -12135,11 +12135,11 @@
       "frameworks": {
         "netcoreapp2.1": {
           "projectReferences": {
-            "C:\\Users\\botha\\source\\repos\\AffinityProject\\CustomerImport\\CustomerImport.csproj": {
-              "projectPath": "C:\\Users\\botha\\source\\repos\\AffinityProject\\CustomerImport\\CustomerImport.csproj"
+            "C:\\Users\\botha\\source\\repos\\AffinityProject\\Affinity\\CustomerImport\\CustomerImport.csproj": {
+              "projectPath": "C:\\Users\\botha\\source\\repos\\AffinityProject\\Affinity\\CustomerImport\\CustomerImport.csproj"
             },
-            "C:\\Users\\botha\\source\\repos\\AffinityProject\\DataContext\\DataContext.csproj": {
-              "projectPath": "C:\\Users\\botha\\source\\repos\\AffinityProject\\DataContext\\DataContext.csproj"
+            "C:\\Users\\botha\\source\\repos\\AffinityProject\\Affinity\\DataContext\\DataContext.csproj": {
+              "projectPath": "C:\\Users\\botha\\source\\repos\\AffinityProject\\Affinity\\DataContext\\DataContext.csproj"
             }
           }
         }

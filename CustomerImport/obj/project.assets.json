@@ -3097,11 +3097,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\botha\\source\\repos\\AffinityProject\\CustomerImport\\CustomerImport.csproj",
+      "projectUniqueName": "C:\\Users\\botha\\source\\repos\\AffinityProject\\Affinity\\CustomerImport\\CustomerImport.csproj",
       "projectName": "CustomerImport",
-      "projectPath": "C:\\Users\\botha\\source\\repos\\AffinityProject\\CustomerImport\\CustomerImport.csproj",
+      "projectPath": "C:\\Users\\botha\\source\\repos\\AffinityProject\\Affinity\\CustomerImport\\CustomerImport.csproj",
       "packagesPath": "C:\\Users\\botha\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\botha\\source\\repos\\AffinityProject\\CustomerImport\\obj\\",
+      "outputPath": "C:\\Users\\botha\\source\\repos\\AffinityProject\\Affinity\\CustomerImport\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\botha\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -3117,8 +3117,8 @@
       "frameworks": {
         "netstandard2.0": {
           "projectReferences": {
-            "C:\\Users\\botha\\source\\repos\\AffinityProject\\DataContext\\DataContext.csproj": {
-              "projectPath": "C:\\Users\\botha\\source\\repos\\AffinityProject\\DataContext\\DataContext.csproj"
+            "C:\\Users\\botha\\source\\repos\\AffinityProject\\Affinity\\DataContext\\DataContext.csproj": {
+              "projectPath": "C:\\Users\\botha\\source\\repos\\AffinityProject\\Affinity\\DataContext\\DataContext.csproj"
             }
           }
         }
