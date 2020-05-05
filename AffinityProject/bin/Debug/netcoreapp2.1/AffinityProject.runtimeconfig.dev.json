@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\botha\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\botha\\.nuget\\packages"
+    ]
+  }
+}

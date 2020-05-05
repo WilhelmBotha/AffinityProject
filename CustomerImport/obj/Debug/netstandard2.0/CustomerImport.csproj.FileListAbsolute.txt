@@ -1,0 +1,11 @@
+C:\Users\botha\source\repos\AffinityProject\CustomerImport\bin\Debug\netstandard2.0\CustomerImport.deps.json
+C:\Users\botha\source\repos\AffinityProject\CustomerImport\bin\Debug\netstandard2.0\CustomerImport.dll
+C:\Users\botha\source\repos\AffinityProject\CustomerImport\bin\Debug\netstandard2.0\CustomerImport.pdb
+C:\Users\botha\source\repos\AffinityProject\CustomerImport\obj\Debug\netstandard2.0\CustomerImport.csprojAssemblyReference.cache
+C:\Users\botha\source\repos\AffinityProject\CustomerImport\obj\Debug\netstandard2.0\CustomerImport.AssemblyInfoInputs.cache
+C:\Users\botha\source\repos\AffinityProject\CustomerImport\obj\Debug\netstandard2.0\CustomerImport.AssemblyInfo.cs
+C:\Users\botha\source\repos\AffinityProject\CustomerImport\obj\Debug\netstandard2.0\CustomerImport.dll
+C:\Users\botha\source\repos\AffinityProject\CustomerImport\obj\Debug\netstandard2.0\CustomerImport.pdb
+C:\Users\botha\source\repos\AffinityProject\CustomerImport\bin\Debug\netstandard2.0\DataContext.dll
+C:\Users\botha\source\repos\AffinityProject\CustomerImport\bin\Debug\netstandard2.0\DataContext.pdb
+C:\Users\botha\source\repos\AffinityProject\CustomerImport\obj\Debug\netstandard2.0\CustomerImport.csproj.CopyComplete

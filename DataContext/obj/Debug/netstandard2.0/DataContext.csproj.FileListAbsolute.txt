@@ -1,0 +1,8 @@
+C:\Users\botha\source\repos\AffinityProject\DataContext\bin\Debug\netstandard2.0\DataContext.deps.json
+C:\Users\botha\source\repos\AffinityProject\DataContext\bin\Debug\netstandard2.0\DataContext.dll
+C:\Users\botha\source\repos\AffinityProject\DataContext\obj\Debug\netstandard2.0\DataContext.csprojAssemblyReference.cache
+C:\Users\botha\source\repos\AffinityProject\DataContext\obj\Debug\netstandard2.0\DataContext.AssemblyInfoInputs.cache
+C:\Users\botha\source\repos\AffinityProject\DataContext\obj\Debug\netstandard2.0\DataContext.AssemblyInfo.cs
+C:\Users\botha\source\repos\AffinityProject\DataContext\bin\Debug\netstandard2.0\DataContext.pdb
+C:\Users\botha\source\repos\AffinityProject\DataContext\obj\Debug\netstandard2.0\DataContext.dll
+C:\Users\botha\source\repos\AffinityProject\DataContext\obj\Debug\netstandard2.0\DataContext.pdb
