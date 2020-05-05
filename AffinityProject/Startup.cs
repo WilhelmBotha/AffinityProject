@@ -11,6 +11,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using AffinityProject.Interfaces;
 using AffinityProject.Services;
+using DataContext.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace AffinityProject
 {
@@ -37,6 +39,8 @@ namespace AffinityProject
             services.AddTransient<IOrderService, OrderService>();
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+
+            services.AddDbContext<AffinityContext>(options => options.UseSqlServer(Configuration.GetConnectionString("Connection")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

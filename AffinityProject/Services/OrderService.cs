@@ -5,13 +5,12 @@ using System.Threading.Tasks;
 using AffinityProject.Interfaces;
 using AffinityProject.ViewModels;
 using DataContext.Models;
-using DataContext;
 
 namespace AffinityProject.Services
 {
     public class OrderService : IOrderService
     {
-        private readonly AffinityContext _dataContext;
+        private AffinityContext _dataContext;
 
         public OrderService(AffinityContext dataContext)
         {
@@ -59,7 +58,8 @@ namespace AffinityProject.Services
         {
             try
             {
-                _dataContext.Remove(orderId);
+                var dbOrder = _dataContext.OrderDetail.Find(orderId);
+                _dataContext.Remove(dbOrder);
 
                 var orders = _dataContext.Order.Select(x => new OrderViewModel
                 {
