@@ -5,6 +5,8 @@ using System.Threading.Tasks;
 using AffinityProject.Interfaces;
 using AffinityProject.ViewModels;
 using DataContext.Models;
+using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.EntityFrameworkCore;
 
 namespace AffinityProject.Services
 {
@@ -17,12 +19,13 @@ namespace AffinityProject.Services
             _dataContext = dataContext;
         }
 
-        public IEnumerable<OrderViewModel> CreateOrder(OrderViewModel order)
+        public async Task<IEnumerable<OrderViewModel>> CreateOrder(OrderViewModel order)
         {
             try
             {
                 var orderToAdd = new Order
                 {
+                    CustomerId = order.CustomerId,
                     OrderDate = order.OrderDate,
                     OrderDetail = new OrderDetail
                     {
@@ -33,7 +36,7 @@ namespace AffinityProject.Services
                 };
 
                 _dataContext.Order.Add(orderToAdd);
-                _dataContext.SaveChanges();
+                await _dataContext.SaveChangesAsync();
 
                 var orders = _dataContext.Order.Select(x => new OrderViewModel
                 {
@@ -48,18 +51,20 @@ namespace AffinityProject.Services
                 return orders;
 
             }
-            catch (Exception)
+            catch (Exception e)
             {
                 return new List<OrderViewModel>();
             }
         }
 
-        public IEnumerable<OrderViewModel> DeleteOrder(int orderId)
+        public async Task<IEnumerable<OrderViewModel>> DeleteOrder(int orderId)
         {
             try
             {
-                var dbOrder = _dataContext.OrderDetail.Find(orderId);
+                var dbOrder = _dataContext.Order.Include("OrderDetail").FirstOrDefault(x => x.Id == orderId);
+                _dataContext.Remove(dbOrder.OrderDetail);
                 _dataContext.Remove(dbOrder);
+                await _dataContext.SaveChangesAsync();
 
                 var orders = _dataContext.Order.Select(x => new OrderViewModel
                 {
@@ -77,6 +82,53 @@ namespace AffinityProject.Services
             {
                 return new List<OrderViewModel>();
             }
+        }
+
+        public OrderViewModel GetOrder(int id)
+        {
+            OrderViewModel orderVm;
+            var customerList = _dataContext.Customer.ToList();
+
+            var selectList = new List<SelectListItem>();
+
+            customerList.ForEach(x => selectList.Add(new SelectListItem
+            {
+                Value = x.Id.ToString(),
+                Text = x.Name
+            }));
+
+            if (id == 0)
+            {
+               
+                orderVm = new OrderViewModel
+                {
+                    CustomerId = 0,
+                    CustomerName = string.Empty,
+                    Id = id,
+                    ItemDescription = string.Empty,
+                    OrderDate = DateTime.Now,
+                    Price = 0,
+                    Quantity = 0,
+                    AvailableCustomers = selectList
+                };
+            }
+            else
+            {
+                var dbOrder = _dataContext.Order.Include("OrderDetail").FirstOrDefault(x => x.Id == id);
+                orderVm = new OrderViewModel
+                {
+                    CustomerId = dbOrder.CustomerId.Value,
+                    CustomerName = dbOrder.Customer.Name,
+                    Id = dbOrder.Id,
+                    ItemDescription = dbOrder.OrderDetail.ItemDescription,
+                    OrderDate = dbOrder.OrderDate,
+                    Price = dbOrder.OrderDetail.Price,
+                    Quantity = dbOrder.OrderDetail.Quantity,
+                    AvailableCustomers = selectList
+                };
+            }
+            
+            return orderVm;
         }
 
         public IEnumerable<OrderViewModel> GetAllOrders()
@@ -101,11 +153,11 @@ namespace AffinityProject.Services
             }
         }
 
-        public IEnumerable<OrderViewModel> UpdateOrder(OrderViewModel updatedOrder)
+        public async Task<IEnumerable<OrderViewModel>> UpdateOrder(OrderViewModel updatedOrder)
         {
             try
             {
-                var dbOrder = _dataContext.Order.Find(updatedOrder.Id);
+                var dbOrder = _dataContext.Order.Include("OrderDetail").FirstOrDefault(x => x.Id == updatedOrder.Id);
 
                 dbOrder.OrderDate = updatedOrder.OrderDate;
                 dbOrder.OrderDetail.ItemDescription = updatedOrder.ItemDescription;
@@ -113,7 +165,7 @@ namespace AffinityProject.Services
                 dbOrder.OrderDetail.Quantity = updatedOrder.Quantity;
 
                 _dataContext.Order.Update(dbOrder);
-
+                await _dataContext.SaveChangesAsync();
                 var orders = _dataContext.Order.Select(x => new OrderViewModel
                 {
                     Id = x.Id,
@@ -126,7 +178,7 @@ namespace AffinityProject.Services
 
                 return orders;
             }
-            catch (Exception)
+            catch (Exception e)
             {
                 return new List<OrderViewModel>();
             }

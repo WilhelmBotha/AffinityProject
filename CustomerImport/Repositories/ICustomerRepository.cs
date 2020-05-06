@@ -1,4 +1,4 @@
-﻿namespace AffinityProject.Repositories
+﻿namespace CustomerImport.Repositories
 {
     public interface ICustomerRepository
     {

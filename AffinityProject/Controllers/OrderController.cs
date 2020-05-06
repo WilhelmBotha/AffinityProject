@@ -19,6 +19,7 @@ namespace AffinityProject.Controllers
             _orderService = orderService;
         }
 
+        [HttpGet]
         public IActionResult Orders()
         {
             ViewData["Title"] = "Orders";
@@ -27,37 +28,40 @@ namespace AffinityProject.Controllers
             return View(orders);
         }
 
-        [HttpPost]
-        public IActionResult UpdateOrder()
-        {
-            //var orders = _orderService.UpdateOrder();
-            return View(new List<OrderViewModel>());
-        }
-
         [HttpGet]
-        public IActionResult AddOrUpdate()
+        public IActionResult AddOrUpdate(int id = 0)
         {
-            return View();
+            ViewData["Title"] = id == 0 ? "Create" : "Update";
+            return View(_orderService.GetOrder(id));
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult AddOrUpdate([Bind("CustomerId, ItemDescription, OrderDate, Price, Quantity")] OrderViewModel order)
+        public async Task<IActionResult> AddOrUpdate([Bind("Id, CustomerId, ItemDescription, OrderDate, Price, Quantity")] OrderViewModel order)
         {
             if (ModelState.IsValid)
             {
-                _orderService.CreateOrder(order);
+                if (order.Id == 0)
+                {
+                   await _orderService.CreateOrder(order);
+                }
+                else
+                {
+                    await _orderService.UpdateOrder(order);
+                }
+
+                
                 return RedirectToAction(nameof(Orders));
             }
            
             return View(order);
         }
 
-        public IActionResult DeleteOrder()
+        [HttpGet]
+        public async Task<IActionResult> DeleteOrder(int id = 0)
         {
-            //var orders = _orderService.DeleteOrder(orderId);
-            //return View(orders);
-            return null;
+            await _orderService.DeleteOrder(id);
+            return RedirectToAction(nameof(Orders));
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

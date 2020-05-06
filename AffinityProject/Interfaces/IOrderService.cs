@@ -9,9 +9,10 @@ namespace AffinityProject.Interfaces
 {
     public interface IOrderService
     {
-        IEnumerable<OrderViewModel> CreateOrder(OrderViewModel order);
+        Task<IEnumerable<OrderViewModel>> CreateOrder(OrderViewModel order);
         IEnumerable<OrderViewModel> GetAllOrders();
-        IEnumerable<OrderViewModel> UpdateOrder(OrderViewModel order);
-        IEnumerable<OrderViewModel> DeleteOrder(int orderId);
+        Task<IEnumerable<OrderViewModel>> UpdateOrder(OrderViewModel order);
+        Task<IEnumerable<OrderViewModel>> DeleteOrder(int orderId);
+        OrderViewModel GetOrder(int id);
     }
 }

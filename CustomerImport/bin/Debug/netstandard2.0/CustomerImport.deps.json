@@ -10,7 +10,8 @@
       "CustomerImport/1.0.0": {
         "dependencies": {
           "DataContext": "1.0.0",
-          "NETStandard.Library": "2.0.3"
+          "NETStandard.Library": "2.0.3",
+          "Microsoft.AspNetCore.Http.Features": "2.1.1.0"
         },
         "runtime": {
           "CustomerImport.dll": {}
@@ -599,6 +600,14 @@
         "runtime": {
           "DataContext.dll": {}
         }
+      },
+      "Microsoft.AspNetCore.Http.Features/2.1.1.0": {
+        "runtime": {
+          "Microsoft.AspNetCore.Http.Features.dll": {
+            "assemblyVersion": "2.1.1.0",
+            "fileVersion": "2.1.1.18157"
+          }
+        }
       }
     }
   },
@@ -1016,6 +1025,11 @@
     },
     "DataContext/1.0.0": {
       "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Microsoft.AspNetCore.Http.Features/2.1.1.0": {
+      "type": "reference",
       "serviceable": false,
       "sha512": ""
     }

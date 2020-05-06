@@ -1,20 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\botha\\source\\repos\\AffinityProject\\Affinity\\DataContext\\DataContext.csproj": {}
+    "C:\\Users\\wilhelm.GENDAC\\Source\\Repos\\AffinityProject\\DataContext\\DataContext.csproj": {}
   },
   "projects": {
-    "C:\\Users\\botha\\source\\repos\\AffinityProject\\Affinity\\DataContext\\DataContext.csproj": {
+    "C:\\Users\\wilhelm.GENDAC\\Source\\Repos\\AffinityProject\\DataContext\\DataContext.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\botha\\source\\repos\\AffinityProject\\Affinity\\DataContext\\DataContext.csproj",
+        "projectUniqueName": "C:\\Users\\wilhelm.GENDAC\\Source\\Repos\\AffinityProject\\DataContext\\DataContext.csproj",
         "projectName": "DataContext",
-        "projectPath": "C:\\Users\\botha\\source\\repos\\AffinityProject\\Affinity\\DataContext\\DataContext.csproj",
-        "packagesPath": "C:\\Users\\botha\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\botha\\source\\repos\\AffinityProject\\Affinity\\DataContext\\obj\\",
+        "projectPath": "C:\\Users\\wilhelm.GENDAC\\Source\\Repos\\AffinityProject\\DataContext\\DataContext.csproj",
+        "packagesPath": "C:\\Users\\wilhelm.GENDAC\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\wilhelm.GENDAC\\Source\\Repos\\AffinityProject\\DataContext\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\botha\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\wilhelm.GENDAC\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -59,7 +62,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
         }
       }
     }

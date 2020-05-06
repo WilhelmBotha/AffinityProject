@@ -11,6 +11,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using AffinityProject.Interfaces;
 using AffinityProject.Services;
+using CustomerImport.Interfaces;
+using CustomerImport.Services;
 using DataContext.Models;
 using Microsoft.EntityFrameworkCore;
 
@@ -37,6 +39,7 @@ namespace AffinityProject
 
             services.AddTransient<IClientService, ClientService>();
             services.AddTransient<IOrderService, OrderService>();
+            services.AddTransient<ICustomerImport, CustomerImportService>();
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 

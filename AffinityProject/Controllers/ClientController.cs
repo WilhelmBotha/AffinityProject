@@ -7,6 +7,8 @@ using Microsoft.AspNetCore.Mvc;
 using AffinityProject.Models;
 using AffinityProject.ViewModels;
 using AffinityProject.Interfaces;
+using CustomerImport.Interfaces;
+using CustomerImport.Repositories;
 
 namespace AffinityProject.Controllers
 {
@@ -23,8 +25,8 @@ namespace AffinityProject.Controllers
         {
             ViewData["Title"] = "Clients";
             ViewData["Message"] = "List of clients";
-
-            return View(new List<ClientViewModel>());
+            var clientList = _clientService.GetAllClients();
+            return View(clientList);
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

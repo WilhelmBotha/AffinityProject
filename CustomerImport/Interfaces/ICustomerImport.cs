@@ -2,12 +2,14 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using DataContext.Models;
+using Microsoft.AspNetCore.Http;
 
-namespace AffinityProject.Interfaces
+namespace CustomerImport.Interfaces
 {
-    interface ICustomerImport
+    public interface ICustomerImport
     {
-        void ImportCustomer();
-        void LoadCustomers();
+        void ImportCustomer(IFormCollection file);
+        IEnumerable<Customer> LoadCustomers();
     }
 }

@@ -1,9 +1,26 @@
-﻿@model IEnumerable<AffinityProject.ViewModels.ClientViewModel>
+﻿@model IEnumerable<AffinityProject.ViewModels.CustomerViewModel>
 
-@{
-    ViewData["Title"] = "Clients";
-}
 <h2>@ViewData["Title"]</h2>
 <h3>@ViewData["Message"]</h3>
 
-<p>Use this area to provide additional information.</p>
+<table class="table">
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Orders</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Orders)
+            </td>
+        </tr>
+    }
+</table>

@@ -1,4 +1,6 @@
-﻿@{
+﻿@model AffinityProject.ViewModels.CsvUploadViewModel
+
+@{
     ViewData["Title"] = "Home Page";
 }
 
@@ -7,5 +9,24 @@
         <h2>Application uses</h2>
         <a asp-area="" asp-controller="Client" asp-action="Clients" class="btn btn-default btn-lg btn-block">Go to client list</a>
         <a asp-area="" asp-controller="Order" asp-action="Orders" class="btn btn-default btn-lg btn-block">Go to list of orders</a>
+        <br />
+        <form enctype="multipart/form-data" method="post" asp-action="Upload">
+            <dl>
+                <dt>
+                    <label asp-for="FormFile"></label>
+                    <br />
+                </dt>
+                <dd>
+                    <input asp-for="FormFile" type="file" class="btn btn-default btn-block">
+                    <span asp-validation-for="FormFile.FileName" class="text-danger"></span>
+                </dd>
+            </dl>
+            <input class="btn btn-default btn-lg btn-block" type="submit" value="Upload" />
+        </form>
+        <br />
     </div>
 </div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

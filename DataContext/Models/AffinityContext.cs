@@ -63,7 +63,7 @@ namespace DataContext.Models
                 entity.HasOne(d => d.Order)
                     .WithOne(p => p.OrderDetail)
                     .HasForeignKey<OrderDetail>(d => d.OrderId)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .OnDelete(DeleteBehavior.Cascade)
                     .HasConstraintName("FK_OrderDetail_Order");
             });
         }

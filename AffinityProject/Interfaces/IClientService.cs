@@ -8,6 +8,6 @@ namespace AffinityProject.Interfaces
 {
     public interface IClientService
     {
-        IEnumerable<ClientViewModel> GetAllClients();
+        IEnumerable<CustomerViewModel> GetAllClients();
     }
 }
