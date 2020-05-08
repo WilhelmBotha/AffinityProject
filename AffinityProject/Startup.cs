@@ -41,7 +41,7 @@ namespace AffinityProject
             services.AddTransient<IOrderService, OrderService>();
             services.AddTransient<ICustomerImport, CustomerImportService>();
 
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+            services.AddMvc(option => option.EnableEndpointRouting = false).SetCompatibilityVersion(CompatibilityVersion.Version_3_0);
 
             services.AddDbContext<AffinityContext>(options => options.UseSqlServer(Configuration.GetConnectionString("Connection")));
         }

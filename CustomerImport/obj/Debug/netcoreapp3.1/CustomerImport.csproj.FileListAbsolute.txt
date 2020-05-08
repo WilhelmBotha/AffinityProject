@@ -1,0 +1,13 @@
+C:\Users\wilhelm.GENDAC\Source\Repos\AffinityProject\CustomerImport\bin\Debug\netcoreapp3.1\CustomerImport.deps.json
+C:\Users\wilhelm.GENDAC\Source\Repos\AffinityProject\CustomerImport\bin\Debug\netcoreapp3.1\CustomerImport.dll
+C:\Users\wilhelm.GENDAC\Source\Repos\AffinityProject\CustomerImport\bin\Debug\netcoreapp3.1\CustomerImport.pdb
+C:\Users\wilhelm.GENDAC\Source\Repos\AffinityProject\CustomerImport\bin\Debug\netcoreapp3.1\DataContext.dll
+C:\Users\wilhelm.GENDAC\Source\Repos\AffinityProject\CustomerImport\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Http.Features.dll
+C:\Users\wilhelm.GENDAC\Source\Repos\AffinityProject\CustomerImport\bin\Debug\netcoreapp3.1\DataContext.pdb
+C:\Users\wilhelm.GENDAC\Source\Repos\AffinityProject\CustomerImport\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Http.Features.xml
+C:\Users\wilhelm.GENDAC\Source\Repos\AffinityProject\CustomerImport\obj\Debug\netcoreapp3.1\CustomerImport.csprojAssemblyReference.cache
+C:\Users\wilhelm.GENDAC\Source\Repos\AffinityProject\CustomerImport\obj\Debug\netcoreapp3.1\CustomerImport.AssemblyInfoInputs.cache
+C:\Users\wilhelm.GENDAC\Source\Repos\AffinityProject\CustomerImport\obj\Debug\netcoreapp3.1\CustomerImport.AssemblyInfo.cs
+C:\Users\wilhelm.GENDAC\Source\Repos\AffinityProject\CustomerImport\obj\Debug\netcoreapp3.1\CustomerImport.csproj.CopyComplete
+C:\Users\wilhelm.GENDAC\Source\Repos\AffinityProject\CustomerImport\obj\Debug\netcoreapp3.1\CustomerImport.dll
+C:\Users\wilhelm.GENDAC\Source\Repos\AffinityProject\CustomerImport\obj\Debug\netcoreapp3.1\CustomerImport.pdb

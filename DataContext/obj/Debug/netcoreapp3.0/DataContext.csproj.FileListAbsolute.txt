@@ -1,0 +1,7 @@
+C:\Users\wilhelm.GENDAC\Source\Repos\AffinityProject\DataContext\bin\Debug\netcoreapp3.0\DataContext.deps.json
+C:\Users\wilhelm.GENDAC\Source\Repos\AffinityProject\DataContext\bin\Debug\netcoreapp3.0\DataContext.dll
+C:\Users\wilhelm.GENDAC\Source\Repos\AffinityProject\DataContext\bin\Debug\netcoreapp3.0\DataContext.pdb
+C:\Users\wilhelm.GENDAC\Source\Repos\AffinityProject\DataContext\obj\Debug\netcoreapp3.0\DataContext.AssemblyInfoInputs.cache
+C:\Users\wilhelm.GENDAC\Source\Repos\AffinityProject\DataContext\obj\Debug\netcoreapp3.0\DataContext.AssemblyInfo.cs
+C:\Users\wilhelm.GENDAC\Source\Repos\AffinityProject\DataContext\obj\Debug\netcoreapp3.0\DataContext.dll
+C:\Users\wilhelm.GENDAC\Source\Repos\AffinityProject\DataContext\obj\Debug\netcoreapp3.0\DataContext.pdb

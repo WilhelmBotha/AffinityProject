@@ -33,7 +33,7 @@ namespace AffinityProject.Controllers
                 _customerImport.ImportCustomer(form);
             }
 
-            return RedirectToAction(nameof(Index));
+            return RedirectToAction("Clients", "Client");
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
